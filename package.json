@@ -26,16 +26,18 @@
     "lint": "eslint ./ --ext .js"
   },
   "dependencies": {
-    "active-win-cli": "^2.0.0",
+    "active-win": "*",
     "json-based-conditions-and-rules-logic-evaluator": "^1.0.2",
+    "meow": "^10.1.2",
     "node-hid": "^2.1.1"
   },
   "devDependencies": {
-    "eslint": "^8.0.1",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.26.1",
+    "eslint": "*",
+    "eslint-config-airbnb": "*",
+    "eslint-plugin-import": "*",
+    "eslint-plugin-jsx-a11y": "*",
+    "eslint-plugin-react": "*",
     "husky": "^7.0.4"
   }
+  
 }

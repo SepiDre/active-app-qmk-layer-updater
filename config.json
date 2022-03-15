@@ -1,5 +1,7 @@
 {
-  "PRODUCT": "z12",
+  "PRODUCT": "CRKBD Loose Transistor Ed.",
+  "USAGEPAGE": 65376,
+  "USAGE": 97,
   "TIMERS": {
     "LINK": 2500,
     "RELINK": 2500,
@@ -7,34 +9,19 @@
   },
   "DEFAULT": 99,
   "CONDITIONS": {
+    "game": {
+      "lhs": "path",
+      "rhs": ["steamapps", "d:\\oldkrams\\games\\", "epic", "ubi"],
+      "type": "contains"
+    },
     "browser": {
       "lhs": "app",
-      "rhs": ["chrome", "firefox", "safari"],
+      "rhs": ["chrome", "firefox", "safari", "brave"],
       "type": "contains"
     },
-    "terminal": {
+    "vsc": {
       "lhs": "app",
-      "rhs": ["terminal", "alacritty", "kitty"],
-      "type": "equals"
-    },
-    "vim": {
-      "lhs": "title",
-      "rhs": "vim",
-      "type": "ends"
-    },
-    "vimtmux": {
-      "lhs": "title",
-      "rhs": ":nvim",
-      "type": "contains"
-    },
-    "figma": {
-      "lhs": "app",
-      "rhs": "figma",
-      "type": "equals"
-    },
-    "figmatitle": {
-      "lhs": "title",
-      "rhs": "figma",
+      "rhs": "visual studio code",
       "type": "ends"
     }
   },
@@ -42,35 +29,7 @@
     {
       "conditions": [
         {
-          "id": "figma",
-          "expected": true
-        }
-      ],
-      "output": 1
-    },
-    {
-      "operator": "and",
-      "conditions": [
-        {
-          "id": "browser",
-          "expected": true
-        },
-        {
-          "id": "figmatitle",
-          "expected": true
-        }
-      ],
-      "output": 1
-    },
-    {
-      "operator": "and",
-      "conditions": [
-        {
-          "id": "terminal",
-          "expected": true
-        },
-        {
-          "id": "vim",
+          "id": "game",
           "expected": true
         }
       ],
@@ -80,24 +39,15 @@
       "operator": "and",
       "conditions": [
         {
-          "id": "terminal",
+          "id": "browser",
           "expected": true
         },
         {
-          "id": "vimtmux",
+          "id": "vsc",
           "expected": true
         }
       ],
-      "output": 3
-    },
-    {
-      "conditions": [
-        {
-          "id": "browser",
-          "expected": true
-        }
-      ],
-      "output": 2
+      "output": 99
     }
   ]
 }
